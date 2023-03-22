@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <title>Title</title>
+   <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-Wynik operacji {{ a }} {{ operacja }} {{ b }} wynosi {{ wynik }}
+   {% block content %}
+   {% endblock %}
 </body>
 </html>

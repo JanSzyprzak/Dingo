@@ -1,0 +1,29 @@
+{% extends "maths/main.html" %}
+
+{% block title %}Maths list{% endblock %}
+
+{% block content %}
+   <table>
+       <tr>
+           <th>Operation</th>
+           <td>{{ math.operation }}</td>
+       </tr>
+       <tr>
+           <th>a</th>
+           <td>{{ math.a }}</td>
+       </tr>
+       <tr>
+           <th>b</th>
+           <td>{{ math.b }}</td>
+       </tr>
+       <tr>
+           <th>Created:</th>
+           <td>{{ math.created }}</td>
+       </tr>
+       <tr>
+           <th>Result</th>
+           <td>{{ math.result }}</td>
+       </tr>
+   </table>
+   <a href="{% url "maths:list" %}">back</a>
+{% endblock %}

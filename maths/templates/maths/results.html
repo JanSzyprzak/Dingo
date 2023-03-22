@@ -1,0 +1,19 @@
+{% extends "maths/main.html" %}
+
+{% block title %}Maths list{% endblock %}
+
+{% block content %}
+   <ul>
+       {% for r in results %}
+           <li>{{ r }}</li>
+       {% endfor %}
+   </ul>
+
+   <form method="post">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit" value="go">
+</form>
+
+
+{% endblock %}

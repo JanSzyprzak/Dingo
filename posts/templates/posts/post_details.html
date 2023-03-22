@@ -1,0 +1,29 @@
+{% extends "posts/main.html" %}
+
+{% block title %}Maths list{% endblock %}
+
+{% block content %}
+   <table>
+       <tr>
+           <th>Title</th>
+           <td>{{ post_details.title }}</td>
+       </tr>
+       <tr>
+           <th>Content</th>
+           <td>{{ post_details.content }}</td>
+       </tr>
+       <tr>
+           <th>Created</th>
+           <td>{{ post_details.created }}</td>
+       </tr>
+       <tr>
+           <th>Modified</th>
+           <td>{{ post_details.modified }}</td>
+       </tr>
+       <tr>
+           <th>Author</th>
+           <td>{{ post_details.author.nick }}</td>
+       </tr>
+   </table>
+   <a href="{% url "posts:posts_list" %}">back</a>
+{% endblock %}
