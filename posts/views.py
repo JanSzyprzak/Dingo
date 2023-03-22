@@ -8,8 +8,10 @@ from django.contrib import messages
 def posts_list(request):
     if request.method == "POST":
         form = PostForm(data=request.POST)
-        author_from_form = Author.objects.get(nick=request.POST['author'])
-        Post.objects.create(title=request.POST['title'], content=request.POST['content'], author = author_from_form)
+        author_from_form = Author.objects.get(id=request.POST['author'])
+        new_post = Post(title=request.POST['title'], content=request.POST['content'], author = author_from_form)
+        #Post.objects.create(title=request.POST['title'], content=request.POST['content'], author = author_from_form)
+        new_post.save()
         messages.add_message(
             request,
             messages.SUCCESS,

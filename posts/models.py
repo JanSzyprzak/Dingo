@@ -11,6 +11,8 @@ class Author(models.Model):
    email = models.EmailField(default='author@example.com')
    bio = models.TextField(blank=True)
 
+   def __str__(self):
+      return f"{self.nick}"
 
 
 class Post(models.Model):
