@@ -10,7 +10,6 @@ def posts_list(request):
         form = PostForm(data=request.POST)
         author_from_form = Author.objects.get(id=request.POST['author'])
         new_post = Post(title=request.POST['title'], content=request.POST['content'], author = author_from_form)
-        #Post.objects.create(title=request.POST['title'], content=request.POST['content'], author = author_from_form)
         new_post.save()
         messages.add_message(
             request,

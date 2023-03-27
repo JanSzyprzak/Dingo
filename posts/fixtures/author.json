@@ -1,0 +1,74 @@
+[
+{
+    "model": "posts.author",
+    "pk": 1,
+    "fields": {
+        "nick": "testowy",
+        "email": "jakis@exapmle.com",
+        "bio": "cos o autorze"
+    }
+},
+{
+    "model": "posts.author",
+    "pk": 2,
+    "fields": {
+        "nick": "testow3y",
+        "email": "jaki634ds@exapmle.com",
+        "bio": "cos o autorze"
+    }
+},
+{
+    "model": "posts.author",
+    "pk": 3,
+    "fields": {
+        "nick": "testow4y",
+        "email": "jaki24s@exapmle.com",
+        "bio": ""
+    }
+},
+{
+    "model": "posts.author",
+    "pk": 4,
+    "fields": {
+        "nick": "testow5y",
+        "email": "jak134ds@exapmle.com",
+        "bio": "cos o autorze"
+    }
+},
+{
+    "model": "posts.author",
+    "pk": 5,
+    "fields": {
+        "nick": "wow pierwszy z PA",
+        "email": "author@example.com",
+        "bio": "fsdf"
+    }
+},
+{
+    "model": "posts.author",
+    "pk": 6,
+    "fields": {
+        "nick": "k",
+        "email": "d@f",
+        "bio": "dfg"
+    }
+},
+{
+    "model": "posts.author",
+    "pk": 7,
+    "fields": {
+        "nick": "nowy",
+        "email": "nowy@nowy",
+        "bio": "fdgsd"
+    }
+},
+{
+    "model": "posts.author",
+    "pk": 8,
+    "fields": {
+        "nick": "fds",
+        "email": "author@example.com",
+        "bio": "fsd"
+    }
+}
+]

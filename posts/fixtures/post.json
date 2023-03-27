@@ -1,0 +1,255 @@
+[
+{
+    "model": "posts.post",
+    "pk": 1,
+    "fields": {
+        "title": "tytuł",
+        "content": "zawartość",
+        "created": "2023-03-13T11:45:03.263Z",
+        "modified": "2023-03-13T11:45:03.263Z",
+        "author": 3
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 2,
+    "fields": {
+        "title": "tytuł234",
+        "content": "zawartość",
+        "created": "2023-03-13T11:45:03.263Z",
+        "modified": "2023-03-13T11:45:03.263Z",
+        "author": 2
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 3,
+    "fields": {
+        "title": "tytuł13",
+        "content": "zawartość",
+        "created": "2023-03-13T11:47:36.282Z",
+        "modified": "2023-03-13T11:47:36.282Z",
+        "author": 3
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 4,
+    "fields": {
+        "title": "tytuł654",
+        "content": "zawartość",
+        "created": "2023-03-13T11:47:36.282Z",
+        "modified": "2023-03-13T11:47:36.282Z",
+        "author": 1
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 5,
+    "fields": {
+        "title": "tytuł856",
+        "content": "zawartość",
+        "created": "2023-03-13T11:47:36.282Z",
+        "modified": "2023-03-13T11:47:36.282Z",
+        "author": 1
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 6,
+    "fields": {
+        "title": "tytuł345",
+        "content": "zawartość",
+        "created": "2023-03-13T11:47:36.282Z",
+        "modified": "2023-03-13T11:47:36.282Z",
+        "author": 2
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 7,
+    "fields": {
+        "title": "tytuł645",
+        "content": "zawartość",
+        "created": "2023-03-13T11:47:36.282Z",
+        "modified": "2023-03-13T11:47:36.282Z",
+        "author": 2
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 8,
+    "fields": {
+        "title": "tytuł345",
+        "content": "zawartość zmieniona",
+        "created": "2023-03-13T11:47:36.282Z",
+        "modified": "2023-03-13T12:36:31.599Z",
+        "author": 4
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 9,
+    "fields": {
+        "title": "tytuł645",
+        "content": "zawartość",
+        "created": "2023-03-13T11:47:36.282Z",
+        "modified": "2023-03-13T11:47:36.282Z",
+        "author": 4
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 10,
+    "fields": {
+        "title": "tytuł43",
+        "content": "zawartość",
+        "created": "2023-03-13T11:47:36.282Z",
+        "modified": "2023-03-13T11:47:36.282Z",
+        "author": 4
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 11,
+    "fields": {
+        "title": "z PA",
+        "content": "cośt tam",
+        "created": "2023-03-13T12:38:15.051Z",
+        "modified": "2023-03-13T12:38:15.051Z",
+        "author": 5
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 12,
+    "fields": {
+        "title": "cxv",
+        "content": "vxcvcvdcxvz",
+        "created": "2023-03-21T12:19:57.112Z",
+        "modified": "2023-03-22T08:14:59.260Z",
+        "author": 1
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 13,
+    "fields": {
+        "title": "kolejny",
+        "content": "kolwejny",
+        "created": "2023-03-21T12:20:16.434Z",
+        "modified": "2023-03-21T12:20:16.434Z",
+        "author": 4
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 14,
+    "fields": {
+        "title": "fsd",
+        "content": "fsd",
+        "created": "2023-03-21T12:27:23.458Z",
+        "modified": "2023-03-21T12:27:23.458Z",
+        "author": 1
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 15,
+    "fields": {
+        "title": "gfdgd",
+        "content": "dsfs",
+        "created": "2023-03-21T12:40:55.146Z",
+        "modified": "2023-03-21T12:40:55.146Z",
+        "author": 1
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 16,
+    "fields": {
+        "title": "vxc",
+        "content": "vxcv",
+        "created": "2023-03-21T12:41:08.886Z",
+        "modified": "2023-03-21T12:41:08.886Z",
+        "author": 1
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 17,
+    "fields": {
+        "title": "vxc",
+        "content": "vxcv",
+        "created": "2023-03-21T12:41:51.749Z",
+        "modified": "2023-03-21T12:41:51.749Z",
+        "author": 1
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 18,
+    "fields": {
+        "title": "vxc",
+        "content": "vxcv",
+        "created": "2023-03-21T12:41:55.020Z",
+        "modified": "2023-03-21T12:41:55.020Z",
+        "author": 1
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 19,
+    "fields": {
+        "title": "df",
+        "content": "dfd",
+        "created": "2023-03-21T12:42:05.073Z",
+        "modified": "2023-03-21T12:42:05.073Z",
+        "author": 1
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 20,
+    "fields": {
+        "title": "test",
+        "content": "test",
+        "created": "2023-03-21T12:43:07.702Z",
+        "modified": "2023-03-21T12:43:07.702Z",
+        "author": 1
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 21,
+    "fields": {
+        "title": "nowy",
+        "content": "fsd",
+        "created": "2023-03-22T08:12:26.453Z",
+        "modified": "2023-03-22T08:12:26.454Z",
+        "author": 5
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 22,
+    "fields": {
+        "title": "fgh",
+        "content": "fh",
+        "created": "2023-03-22T10:01:30.312Z",
+        "modified": "2023-03-22T10:01:30.312Z",
+        "author": 1
+    }
+},
+{
+    "model": "posts.post",
+    "pk": 23,
+    "fields": {
+        "title": "dffds",
+        "content": "fsdf",
+        "created": "2023-03-22T10:03:24.870Z",
+        "modified": "2023-03-22T10:03:24.870Z",
+        "author": 2
+    }
+}
+]
