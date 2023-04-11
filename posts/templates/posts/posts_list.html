@@ -1,24 +1,66 @@
-{% extends 'posts/main.html' %}
+{% extends 'greetings/main.html' %}
+{% load django_bootstrap_breadcrumbs %}
 
-{% block title %}Lista postów{% endblock %}
+
+{% block title %}Posts list{% endblock %}
+{% load static %}
+{% block local_styles %}<link rel="stylesheet" type="text/css" href="{% static 'posts/css/style_posts.css' %}">{% endblock %}
+{% block breadcrumb %}
+    {% breadcrumb "Home" "greetings:home" %}
+    {% breadcrumb "Posts" "posts:posts_list" %}
+    
+    
+{% endblock %}
+
+{% block breadcrumb2 %}
+    {% render_breadcrumbs "posts/breadcrumbs.html" %}
+{% endblock %}
 
 {% block content %}
 
-<ul>
-    {% for p in posts_list %}
-        <li><a href="{% url "posts:post_details" p.id %}">{{ p.title }}</a></li>
-    {% endfor %}
-</ul>
+<div class="content">
+    <div class="content2">
+        <div class ="table">
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Created</th>
+                </tr>
+                {% for p in posts_list %}
+                <tr>
+                    <td><a class="result" href="{% url "posts:post_details" p.id %}" class="text">{{ p.title }}</a></td>
+                    <td>{{ p.author }}</td>
+                    <td>{{ p.created }}</td>
+                </tr>
+                {% endfor %}      
+            </table>
+        </div>
+        <div class="table">
+            <span>
+                {% if posts_list.has_previous %}
+                    <a class="result" href="?page=1" class="black">« first</a>
+                    <a class="result" href="?page={{ posts_list.previous_page_number }}" class="black">previous</a>
+                {% endif %}
+         
+                <span>
+                    Page {{ posts_list.number }} of {{ posts_list.paginator.num_pages }}.
+                </span>
+         
+                {% if posts_list.has_next %}
+                    <a class="result" href="?page={{ posts_list.next_page_number }}" class="black">next</a>
+                    <a class="result" href="?page={{ posts_list.paginator.num_pages }}" class="black">last »</a>
+                {% endif %}
+            </span>
+        </div>
 
-<br>
-
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_ul }}
-    <input type="submit" value="go">
-</form>
-
-
-
-
+    </div>
+    <div class="content2">
+        <form class = "table" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="go">
+    </form>
+    </div>
+</div>
 {% endblock %}

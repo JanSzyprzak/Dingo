@@ -3,6 +3,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib import messages
+from django.core.paginator import Paginator
+from django.contrib.auth.decorators import login_required
 from maths.forms import ResultForm
 from maths.models import Math, Result
 # Create your views here.
@@ -14,6 +16,7 @@ def math(request):
 
 
 def add(request, a, b):
+    a, b = int(a), int(b)
     wynik = a + b
     c = {"a": a, "b": b, "operacja": "+", "wynik": wynik, "title": "dodawanie"}
 
@@ -34,7 +37,7 @@ def sub(request, a, b):
    Math.objects.create(operation='sub', a=a, b=b, result=result)
    return render(
     	    request=request,
-    	    template_name="maths/main.html",
+    	    template_name="maths/operation.html",
     	    context=c
    )
 
@@ -49,7 +52,7 @@ def mul(request, a, b):
    Math.objects.create(operation='mul', a=a, b=b, result=result)
    return render(
     	    request=request,
-    	    template_name="maths/main.html",
+    	    template_name="maths/operation.html",
     	    context=c
    )
 
@@ -63,17 +66,21 @@ def div(request, a, b):
    Math.objects.create(operation='div', a=a, b=b, result=result)
    return render(
     	    request=request,
-    	    template_name="maths/main.html",
+    	    template_name="maths/operation.html",
     	    context=c
    )
 
-
+@login_required
 def maths_list(request):
    maths = Math.objects.all()
+   math_model_names = Math._meta.get_fields()
+   paginator = Paginator(maths, 5)
+   page_number = request.GET.get('page')
+   maths = paginator.get_page(page_number)
    return render(
        request=request,
        template_name="maths/list.html",
-       context={"maths": maths}
+       context={"maths": maths, "math_model_names": math_model_names}
    )
 
 def math_details(request, id):

@@ -1,8 +1,26 @@
-{% extends "posts/main.html" %}
+{% extends "greetings/main.html" %}
+{% load django_bootstrap_breadcrumbs %}
 
-{% block title %}Maths list{% endblock %}
+{% block title %}Post details{% endblock %}
+{% load static %}
+{% block local_styles %}<link rel="stylesheet" type="text/css" href="{% static 'posts/css/style_posts.css' %}">{% endblock %}
+
+{% block breadcrumb %}
+    {% breadcrumb "Home" "greetings:home" %}
+    {% breadcrumb "Posts" "posts:posts_list" %}
+    {% breadcrumb "Details" "post_details" %}
+    
+{% endblock %}
+
+
+{% block breadcrumb2 %}
+    {% render_breadcrumbs "posts/breadcrumbs.html" %}
+{% endblock %}
+
+
 
 {% block content %}
+<div class="table">
    <table>
        <tr>
            <th>Title</th>
@@ -25,5 +43,9 @@
            <td>{{ post_details.author.nick }}</td>
        </tr>
    </table>
-   <a href="{% url "posts:posts_list" %}">back</a>
+   
+</div>
+<div class="table">
+    <a class="result" href="{% url "posts:posts_list" %}">back</a>
+</div>
 {% endblock %}

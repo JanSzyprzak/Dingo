@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DINGO!</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'greetings/css/style_index.css' %}">
+</head>
+<body>
+    <div class="main">
+        <div class="menu">
+            <div class="navigation">
+                <div class="box text_center font"><a href="{% url "greetings:about" %}">ABOUT</a></div>
+                <div class="box text_left font"><a href="{% url "posts:posts_list" %}">POSTS</a></div>
+                <div class="box text_right font"><a href="{% url "maths:list" %}">MATHS</a></div>
+                <div class="box text_center font"><a href="{% url "greetings:contact" %}">CONTACT</a></div>      
+            </div>
+        </div>
+        <div class="title text_center font">
+            <h1>DINGO!</h1>
+        </div>
+        <div>
+            
+            <img src="{% static 'greetings/img/dingo3.jpg' %}" class="image">
+
+
+        
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+

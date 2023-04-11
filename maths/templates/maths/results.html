@@ -1,8 +1,9 @@
-{% extends "maths/main.html" %}
+{% extends "greetings/main.html" %}
 
-{% block title %}Maths list{% endblock %}
+{% block title %}Results{% endblock %}
 
 {% block content %}
+<div class = "table">
    <ul>
        {% for r in results %}
            <li>{{ r }}</li>
@@ -13,7 +14,7 @@
     {% csrf_token %}
     {{ form.as_table }}
     <input type="submit" value="go">
-</form>
-
+    </form>
+</div>
 
 {% endblock %}

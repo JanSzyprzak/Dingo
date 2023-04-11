@@ -1,8 +1,25 @@
-{% extends "maths/main.html" %}
+{% extends "greetings/main.html" %}
+{% load django_bootstrap_breadcrumbs %}
+{% block title %}Math details{% endblock %}
+{% load static %}
+{% block local_styles %}<link rel="stylesheet" type="text/css" href="{% static 'maths/css/style_maths.css' %}">{% endblock %}
 
-{% block title %}Maths list{% endblock %}
+{% block breadcrumb %}
+    {% breadcrumb "Home" "greetings:home" %}
+    {% breadcrumb "Maths" "maths:list" %}
+    {% breadcrumb "Details" "details" %}
+{% endblock %}
+
+
+{% block breadcrumb2 %}
+    {% render_breadcrumbs "maths/breadcrumbs.html" %}
+{% endblock %}
+
+
+
 
 {% block content %}
+<div class="table">
    <table>
        <tr>
            <th>Operation</th>
@@ -25,5 +42,9 @@
            <td>{{ math.result }}</td>
        </tr>
    </table>
-   <a href="{% url "maths:list" %}">back</a>
+   
+</div>
+<div class ="table">
+    <a class="result" href="{% url "maths:list" %}">back</a>
+</div>
 {% endblock %}

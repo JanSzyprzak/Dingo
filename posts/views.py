@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from django.core.paginator import Paginator
+from django.contrib import messages
 from .models import Post, Author
 from .forms import PostForm, AuthorForm
-from django.contrib import messages
+
 
 # Create your views here.
 
@@ -20,6 +22,9 @@ def posts_list(request):
        
     posts_list = Post.objects.all()
     form = PostForm()
+    paginator = Paginator(posts_list, 7)
+    page_number = request.GET.get('page')
+    posts_list = paginator.get_page(page_number)
     return render(
        request=request,
        template_name="posts/posts_list.html",

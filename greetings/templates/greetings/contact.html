@@ -1,0 +1,24 @@
+{% extends "greetings/main.html" %}
+
+{% load django_bootstrap_breadcrumbs %}
+
+{% block title %}Contact{% endblock %}
+{% load static %}
+{% block local_styles %}<link rel="stylesheet" type="text/css" href="{% static 'greetings/css/style_main.css' %}">{% endblock %}
+
+{% block breadcrumb %}
+    {% breadcrumb "Home" "greetings:home" %}
+    {% breadcrumb "Contact" "greetings:contact" %}   
+{% endblock %}
+
+{% block breadcrumb2 %}
+    {% render_breadcrumbs "greetings/breadcrumbs.html" %}
+{% endblock %}
+
+
+
+{% block content %}
+<div class="table">
+    jan.szyprzak@gmail.com
+</div>
+{% endblock %}

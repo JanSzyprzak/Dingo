@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<nav aria-label="breadcrumb">
+    <div class="breadcrumb">
+      {% for url, label in breadcrumbs %}
+        {% if not url or forloop.counter == breadcrumbs_total %}
+          <span class="breadcrumb-item{% if forloop.counter == breadcrumbs_total %} active{% endif %}" {% if forloop.counter == breadcrumbs_total %}aria-current="page"{% endif %}>{{ label|safe }}</span>
+        {% else %}
+          <span class="breadcrumb-item"><a style = "color:blue; text-decoration: none;" href="{{ url }}">{{ label|safe }} /</a></span>
+        {% endif %}
+      {% endfor %}
+    </div>
+</nav>
+
+</html>
